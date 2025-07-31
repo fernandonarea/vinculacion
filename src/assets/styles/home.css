@@ -1,0 +1,163 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ⬅️ centra horizontalmente todo */
+  gap: 8rem;
+  padding: 2rem;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+
+.main-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.container-images {
+  overflow: hidden;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.4rem 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  border: none;
+}
+
+.leftArrow {
+  left: 1rem;
+}
+
+.rightArrow {
+  right: 1rem;
+}
+
+.cards-container {
+  width: 100%;
+  gap: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.custom-card {
+  width: 100%;
+  max-width: fit-content;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.chart {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 3rem;
+  margin: 0 auto;
+}
+
+.chart-image img {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  padding: 1rem;
+}
+
+
+.news-section-title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.new {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: solid 1px rgb(214, 214, 214);
+}
+
+
+.new img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 1.5rem;
+}
+
+.new-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+  .arrow {
+    font-size: 1.25rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .custom-card {
+    padding: 1.5rem;
+  }
+}
